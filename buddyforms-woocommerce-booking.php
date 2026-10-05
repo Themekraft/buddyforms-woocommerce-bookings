@@ -3,7 +3,7 @@
  * Plugin Name: BuddyForms Woocommerce Booking
  * Plugin URI: http://buddyforms.com/downloads/
  * Description: Add Woocommerce Booking Element to your BuddyForms
- * Version: 1.0.1
+ * Version: 1.0.3
  * Author: ThemeKraft Team
  * Author URI: https://profiles.wordpress.org/svenl77
  * License: GPLv2 or later
@@ -12,7 +12,7 @@
  * @package bf_woo_elem
  * *****************************************************************************
  * WC requires at least: 3.0.0
- * WC tested up to: 3.4.1
+ * WC tested up to: 11.1
  *****************************************************************************
  *
  * This script is free software; you can redistribute it and/or modify
@@ -35,6 +35,15 @@
 if (! defined('WPINC')) {
     die;
 }
+
+add_action(
+    'before_woocommerce_init',
+    function () {
+        if (class_exists(\Automattic\WooCommerce\Utilities\FeaturesUtil::class)) {
+            \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility('custom_order_tables', __FILE__, true);
+        }
+    }
+);
 
 if (! class_exists('buddyforms_woocommerce_booking')) {
     require_once dirname(__FILE__) . '/classes/class-bf-woo-book-fs.php';
