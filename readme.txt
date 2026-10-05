@@ -3,7 +3,7 @@ Contributors: gfirem, marin250189, themekraft, svenl77
 Tags: buddyforms, buddyforms fields, buddyforms field woocommerce booking, woocommerce booking
 Requires at least: 4.5
 Tested up to: 7.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,6 +50,10 @@ Activate the plugin through the 'Plugins' menu in WordPress.
 > * If you still get stuck somewhere, our support gets you back on the right track. You can find all help buttons in your BuddyForms Settings Panel in your WP Dashboard and the Help Center!
 
 == Changelog ==
+
+= 1.0.3 - 05 Oct 2026 =
+* Compatible with WooCommerce High-Performance Order Storage (HPOS).
+* Requires WordPress 5.9 and PHP 7.4. Tested up to WordPress 7.1 and WooCommerce 11.1.
 
 = 1.0.2 - 16 Jan 2023 =
 * Updated duration of trial version.
